@@ -21,22 +21,7 @@ const fetchMovies = async (): Promise<TMDBResponse> => {
 
 const Home = async () => {
   const movies = await fetchMovies();
-  return (
-    <div>
-      <div>
-        <h1>{movies.results.length}개의 영화가 있습니다.</h1>
-        <p>{movies.page}번째 페이지 입니다.</p>
-        <p>
-          tmdb에는 {movies.total_results.toLocaleString()}의 영화가 있습니다.
-        </p>
-      </div>
-      <Link href="asdfasdf" className="border">
-        Link
-      </Link>
-
-      <ReadMore {...movies} />
-    </div>
-  );
+  return <ReadMore {...movies} />;
 };
 
 export default Home;
