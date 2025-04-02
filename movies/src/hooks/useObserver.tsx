@@ -19,7 +19,7 @@ const useObserver = () => {
         setIsInView(true);
       } else {
         setIsInView(false);
-      }¡
+      }
     });
 
     if (ref.current) {
